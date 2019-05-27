@@ -75,7 +75,7 @@ class SignatureCapture extends React.Component {
     saveImage() {
         UIManager.dispatchViewManagerCommand(
             ReactNative.findNodeHandle(this),
-            UIManager.RSSignatureView.Commands.saveImage,
+           UIManager.getViewManagerConfig('RSSignatureView').Commands.saveImage,
             [],
         );
     }
@@ -83,7 +83,7 @@ class SignatureCapture extends React.Component {
     resetImage() {
         UIManager.dispatchViewManagerCommand(
             ReactNative.findNodeHandle(this),
-            UIManager.RSSignatureView.Commands.resetImage,
+            UIManager.getViewManagerConfig('RSSignatureView').Commands.resetImage,
             [],
         );
     }
